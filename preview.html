@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Wheel Pro</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+<div class="app">
+
+    <aside class="admin-panel">
+
+        <h2>⚙ Quản trị</h2>
+
+        <div class="add-form">
+            <input id="newText" placeholder="Tên phần thưởng">
+            <input id="newColor" type="color" value="#ffcc66">
+            <button id="addBtn">Thêm</button>
+        </div>
+
+        <div id="itemList"></div>
+
+    </aside>
+
+    <main class="wheel-area">
+
+        <div class="sparkle s1">✦</div>
+        <div class="sparkle s2">✦</div>
+        <div class="sparkle s3">✦</div>
+        <div class="sparkle s4">✦</div>
+
+        <div class="wheel-wrapper">
+
+            <div class="pointer">
+                <div class="pointer-body"></div>
+                <div class="pointer-tip"></div>
+                <div class="pointer-hole"></div>
+            </div>
+
+            <canvas id="wheel" width="700" height="700"></canvas>
+
+            <button id="spinBtn">
+                QUAY
+            </button>
+
+        </div>
+
+    </main>
+
+</div>
+
+<div id="resultModal" class="modal">
+
+    <div class="modal-content">
+
+        <h1>🎉 Chúc mừng 🎉</h1>
+
+        <h2 id="resultText"></h2>
+
+        <button onclick="closeModal()">
+            Đóng
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
